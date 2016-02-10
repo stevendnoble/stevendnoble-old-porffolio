@@ -7,13 +7,22 @@ $(function() {
       $bio = $('#bio'),
       $contact = $('#contact');
 
+  var imageId = 0;
+
   function switchTab() {
-    console.log("i'm in!");
     $links.hide();
     var show = $(this).attr('href');
     $(show).show();
   }
 
+  function switchImage() {
+    $('.img-' + imageId).hide();
+    imageId = (imageId + 1) % 6;
+    $('.img-' + imageId).show();
+  }
+
   $navlinks.on('click', switchTab);
+  
+  var intervalID = setInterval(switchImage, 3000);
 
 });
