@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
 .navbar-margin {
   padding: 35px;
 }
