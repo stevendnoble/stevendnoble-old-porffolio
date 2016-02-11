@@ -10,6 +10,7 @@ $(function() {
   var imageId = 0;
 
   function switchTab() {
+    event.preventDefault();
     $links.hide();
     var show = $(this).attr('href');
     $(show).show();
