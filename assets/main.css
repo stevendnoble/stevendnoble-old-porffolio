@@ -47,11 +47,11 @@ h3.header-text {
   color: maroon;
 }
 */
-a {
+a, .pagelink {
   color: brown;
 }
 
-a:hover {
+a:hover, .pagelink:hover {
   color: maroon;
   text-decoration: none;
 }
