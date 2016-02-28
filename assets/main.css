@@ -2,10 +2,17 @@
 
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
 }
 
 p {
-  font-size: 24px;
+  font-size: 100%;
+}
+
+.navbar-brand {
+  font-size: 100%;
+  font-weight: bold;
 }
 
 .navbar-margin {
