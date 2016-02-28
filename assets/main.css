@@ -4,6 +4,10 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+p {
+  font-size: 24px;
+}
+
 .navbar-margin {
   padding: 35px;
 }
@@ -32,21 +36,6 @@ body {
   color: maroon !important;
 }
 
-/*.header {
-  margin-top: 5px;
-  color: maroon;
-}
-
-h4.header-text {
-  margin-top: 0;
-  color: maroon;
-}
-
-h3.header-text {
-  margin: 5px;
-  color: maroon;
-}
-*/
 a, .pagelink {
   color: brown;
 }
