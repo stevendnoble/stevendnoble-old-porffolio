@@ -1,12 +1,7 @@
 $(function() {
   var $navlinks = $('a.navlink'),
       $pagelinks = $('a.pagelink'),
-      $links = $('.links'),
-      $profile = $('#profile'),
-      $projects = $('#projects'),
-      $resume = $('#resume'),
-      $bio = $('#bio'),
-      $contact = $('#contact');
+      $links = $('.links');
 
   var imageId = 0;
 

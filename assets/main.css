@@ -81,7 +81,7 @@ a:hover, .pagelink:hover {
   text-decoration: none;
 }
 
-#projects, #resume, #bio, #contact {
+#projects, #rocksbox-projects, #resume, #bio, #contact {
   display: none;
 }
 
