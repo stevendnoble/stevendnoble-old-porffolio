@@ -1,93 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
 
-html {
+body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 16px;
+  line-height: 1.4;
 } 
 
-body {
-  font-size: 140%;
-}
-@media (min-width:40em) {
-  body {
-    font-size: 100%
-  }
-}
-
-p {
-  font-size: 100%;
-}
-
-h1 {
-  font-size: 200%;
-}
-
-h2 {
-  font-size: 150%
-}
-
-h3 {
-  font-size: 130%;
-}
-
-h4 {
-  font-size: 115%;
-}
-
-.navbar-brand {
-  font-size: 100%;
-  font-weight: bold;
-}
-
-.navbar-margin {
-  padding: 35px;
-}
-
-.purple {
-  color: purple;
-}
-
-.red {
-  color: brown;
-}
-
-.black {
-  background-color: black;
-}
-
-.white {
-  color: white;
-}
-
-.navlink {
-  color: #F5F5F5 !important;
-}
-
-.navlink:hover {
-  color: maroon !important;
-}
-
-a, .pagelink {
-  color: brown;
-}
-
-a:hover, .pagelink:hover {
-  color: maroon;
-  text-decoration: none;
+hr {
+  max-width: 60%;
+  border-top: 2px solid;
 }
 
 #projects, #rocksbox-projects, #resume, #bio, #contact {
   display: none;
-}
-
-.btn-default {
-  background-color: brown !important;
-  color: black;
-}
-
-.btn-default:hover, .btn-default:focus {
-  background-color: maroon !important;
 }
 
 .project-images {
@@ -98,12 +23,116 @@ a:hover, .pagelink:hover {
   display: none;
 }
 
-.well2 {
-  padding: 40px;
+.full-height {
+  height: 100vh;
+  overflow: scroll;
 }
 
-.buttonlinks {
+.social-buttons-3 {
+  max-width: 195px;
+  margin: 20px auto;
+}
+
+.social-buttons-4 {
+  max-width: 260px;
+  margin: 20px auto;
+}
+
+.button-link {
   border-radius: 25px;
   height: 50px !important;
+  width: 50px;
   padding: 10px;
+  margin: 0 5px;
+}
+
+.headshot {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.headshot-image {
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+/*darkest*/
+.text-color-1            { color: #160F29; }
+a:hover, .pagelink:hover { color: #160F29; text-decoration: none; }
+
+
+.btn-primary:hover,
+.btn-primary:focus
+              { background-color: #246A73 !important;
+                    border-color: #246A73 !important;}
+.background-1 { background-color: #246A73; }
+.btn-default             { color: #246A73 !important; }
+.text-color-3            { color: #246A73; }
+a, .pagelink             { color: #246A73; }
+
+.text-color-2            { color: #368F8B; }
+.btn-primary  { background-color: #368F8B !important;
+                    border-color: #368F8B !important; }
+.btn-default:hover,
+.btn-default:focus
+              { background-color: #DDBEA8 !important;
+                    border-color: #DDBEA8 !important;}
+
+.background-2 { background-color: #F3DFC1; }
+.btn-default  { background-color: #F3DFC1 !important;
+                    border-color: #F3DFC1 !important; }
+/*lightest*/
+
+.p8 { padding: 8px; }
+.p16 { padding:16px; }
+.p24 { padding:24px; }
+.p32 { padding:32px; }
+.p40 { padding:40px; }
+.pt8 { padding-top: 8px; }
+.pt16 { padding-top:16px; }
+.pt24 { padding-top:24px; }
+.pt32 { padding-top:32px; }
+.pt40 { padding-top:40px; }
+.plr8 { padding-left: 8px; padding-right: 8px}
+.plr16 { padding-left:16px; padding-right: 16px}
+.plr24 { padding-left:24px; padding-right: 24px}
+.plr32 { padding-left:32px; padding-right: 32px}
+.plr40 { padding-left:40px; padding-right: 40px}
+.mb8 { margin-bottom: 8px; }
+.mb16 { margin-bottom:16px; }
+.mb24 { margin-bottom:24px; }
+.mb32 { margin-bottom:32px; }
+.mb40 { margin-bottom:40px; }
+.mt8 { margin-top: 8px; }
+.mt16 { margin-top:16px; }
+.mt24 { margin-top:24px; }
+.mt32 { margin-top:32px; }
+.mt40 { margin-top:40px; }
+
+.tmp-hidden { display: none; }
+
+/* bootstrap overrides */
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+}
+
+.row {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.well {
+  border-radius: 0;
+  margin-bottom: 10px;
 }

@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+html {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+} 
+
+body {
+  font-size: 100%;
+}
+
+p {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 150%
+}
+
+h3 {
+  font-size: 130%;
+}
+
+h4 {
+  font-size: 115%;
+}
+
+.container {
+  max-width: 1080px;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navbar-brand {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.navbar-margin {
+  height: 60px;
+}
+
+.purple {
+  color: purple;
+}
+
+.red {
+  color: brown;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  color: white;
+}
+
+.navlink {
+  color: #F5F5F5 !important;
+  padding-left: 0 !important;
+  padding-right: 30px !important;
+}
+
+.navlink:hover {
+  color: maroon !important;
+}
+
+a, .pagelink {
+  color: brown;
+}
+
+a:hover, .pagelink:hover {
+  color: maroon;
+  text-decoration: none;
+}
+
+#projects, #rocksbox-projects, #resume, #bio, #contact {
+  display: none;
+}
+
+.btn-default {
+  background-color: brown !important;
+  color: black;
+}
+
+.btn-default:hover, .btn-default:focus {
+  background-color: maroon !important;
+}
+
+.project-images {
+  border: 1px solid darkgray;
+}
+
+.img-2, .img-3, .img-4, .img-5, .img-1 {
+  display: none;
+}
+
+.full-height {
+  height: calc(100vh - 80px);
+  overflow: scroll;
+}
+
+.quarter-height {
+  min-height: calc((100% - 30px)/4);
+}
+
+.p40 {
+  padding: 40px;
+}
+
+.button-links {
+  border-radius: 25px;
+  height: 50px !important;
+  width: 50px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.no-padding {
+  /*padding: 0;*/
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.headshot {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* bootstrap overrides */
+.well {
+  border-radius: 0;
+  margin-bottom: 10px;
+}

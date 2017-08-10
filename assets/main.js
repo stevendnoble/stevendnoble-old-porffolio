@@ -1,6 +1,5 @@
 $(function() {
-  var $navlinks = $('a.navlink'),
-      $pagelinks = $('a.pagelink'),
+  var $pageLinks = $('a.page-link'),
       $links = $('.links');
 
   var imageId = 0;
@@ -18,8 +17,7 @@ $(function() {
     $('.img-' + imageId).show();
   }
 
-  $navlinks.on('click', switchTab);
-  $pagelinks.on('click', switchTab);
+  $pageLinks.on('click', switchTab);
   
   var intervalID = setInterval(switchImage, 3000);
 

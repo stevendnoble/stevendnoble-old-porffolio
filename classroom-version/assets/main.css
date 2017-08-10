@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@font-face {
+  font-family: 'Crayon Crumble';
+  src: url("dk_crayon_crumble-webfont.woff2") format("woff2"), url("dk_crayon_crumble-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'kg_second_chances_sketchRg';
+  src: url("kgsecondchancessketch-webfont.woff2") format("woff2"), url("kgsecondchancessketch-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'kg_second_chances_solidRg';
+  src: url("kgsecondchancessolid-webfont.woff2") format("woff2"), url("kgsecondchancessolid-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'kg_ten_thousand_reasonsRg';
+  src: url("kgtenthousandreasons-webfont.woff2") format("woff2"), url("kgtenthousandreasons-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'kg_ten_thousand_reasons_altRg';
+  src: url("kgtenthousandreasonsalt-webfont.woff2") format("woff2"), url("kgtenthousandreasonsalt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  background: #000 url("blackboard-background.jpg") no-repeat fixed;
+  background-size: cover;
+  font-family: 'kg_ten_thousand_reasons_altRg', 'Helvetica Neue', Helvetica, sans-serif;
+  color: white;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 2px; }
+  body .agenda, body .homework {
+    z-index: 10; }
+  body .hi-message {
+    margin: 30px calc(50% - 187px);
+    font-size: 200%; }
+  body .experience .small-text {
+    font-size: 14px; }
+  body .experience ul li:before {
+    margin: 0; }
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  text-indent: -2em;
+  margin-bottom: 30px; }
+  ul li:hover, ul li.hover {
+    color: #FFFF99; }
+  ul.starred li:before {
+    content: '* ';
+    color: lightblue; }
+
+p {
+  font-size: 100%; }
+
+h1 {
+  font-family: 'kg_second_chances_sketchRg', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 200%; }
+
+.container {
+  width: 100%; }
+
+.row {
+  margin-left: -5px;
+  margin-right: -5px; }
+
+.no-margin {
+  margin: 0; }
+
+.no-padding {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.hidden {
+  display: none; }
+
+.blue {
+  color: lightblue;
+  font-size: 200%; }
+
+.green {
+  color: lightgreen;
+  font-size: 120%; }
+
+.yellow {
+  color: #FFFF99; }
+
+.pink {
+  color: pink;
+  font-size: 110%; }
+
+/*# sourceMappingURL=main.css.map */
