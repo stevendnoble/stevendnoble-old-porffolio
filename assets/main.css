@@ -4,7 +4,12 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4;
+  background-color: #F3DFC1
 } 
+
+.name {
+  font-size: 240%;
+}
 
 hr {
   max-width: 60%;
@@ -81,6 +86,7 @@ a, .pagelink             { color: #246A73; }
 .background-2 { background-color: #F3DFC1; }
 .btn-default  { background-color: #F3DFC1 !important;
                     border-color: #F3DFC1 !important; }
+.text-color-4            { color: #F3DFC1; }
 /*lightest*/
 
 .p8 { padding: 8px; }
