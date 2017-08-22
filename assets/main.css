@@ -9,15 +9,29 @@ body {
 
 .name {
   font-size: 240%;
+  margin-top: 0;
 }
 
 hr {
   max-width: 60%;
   border-top: 2px solid;
+  margin-top: 12px;
+  margin-bottom: 8px;
 }
 
 #projects, #rocksbox-projects, #resume, #bio, #contact {
   display: none;
+}
+
+.side-panel {
+  position: relative;
+}
+
+.side-panel .center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
 }
 
 .project-images {
@@ -34,42 +48,52 @@ hr {
 }
 
 .social-buttons-3 {
-  max-width: 195px;
-  margin: 20px auto;
+  max-width: 187px;
+  margin: 10px auto;
 }
 
 .social-buttons-4 {
-  max-width: 260px;
-  margin: 20px auto;
+  max-width: 250px;
+  margin: 10px auto;
 }
 
 .button-link {
+  position: relative;
   border-radius: 25px;
-  height: 50px !important;
+  height: 50px;
   width: 50px;
-  padding: 10px;
   margin: 0 5px;
 }
 
+.button-link i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .headshot {
-  max-width: 80%;
+  max-width: 60%;
   margin: 0 auto;
 }
 
 .headshot-image {
-  max-height: 300px;
+  max-height: 240px;
   margin: 0 auto;
 }
 
+/*.links {
+  margin-bottom: 60px;
+}
+*/
 /*darkest*/
 .text-color-1            { color: #160F29; }
 a:hover, .pagelink:hover { color: #160F29; text-decoration: none; }
 
-
 .btn-primary:hover,
 .btn-primary:focus
               { background-color: #246A73 !important;
-                    border-color: #246A73 !important;}
+                    border-color: #246A73 !important; }
 .background-1 { background-color: #246A73; }
 .btn-default             { color: #246A73 !important; }
 .text-color-3            { color: #246A73; }
@@ -81,9 +105,12 @@ a, .pagelink             { color: #246A73; }
 .btn-default:hover,
 .btn-default:focus
               { background-color: #DDBEA8 !important;
-                    border-color: #DDBEA8 !important;}
+                    border-color: #DDBEA8 !important; }
+.background-3 { background-color: #DDBEA8; }
 
+.well         { background-color: #F3DFC1; }
 .background-2 { background-color: #F3DFC1; }
+.btn-primary             { color: #F3DFC1 !important; }
 .btn-default  { background-color: #F3DFC1 !important;
                     border-color: #F3DFC1 !important; }
 .text-color-4            { color: #F3DFC1; }
@@ -99,6 +126,11 @@ a, .pagelink             { color: #246A73; }
 .pt24 { padding-top:24px; }
 .pt32 { padding-top:32px; }
 .pt40 { padding-top:40px; }
+.pb8 { padding-bottom: 8px; }
+.pb16 { padding-bottom:16px; }
+.pb24 { padding-bottom:24px; }
+.pb32 { padding-bottom:32px; }
+.pb40 { padding-bottom:40px; }
 .plr8 { padding-left: 8px; padding-right: 8px}
 .plr16 { padding-left:16px; padding-right: 16px}
 .plr24 { padding-left:24px; padding-right: 24px}
@@ -140,5 +172,7 @@ a, .pagelink             { color: #246A73; }
 
 .well {
   border-radius: 0;
-  margin-bottom: 10px;
+  border: none;
+  margin: 16px;
+  box-shadow: none;
 }
