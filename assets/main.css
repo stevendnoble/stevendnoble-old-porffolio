@@ -32,6 +32,7 @@ hr {
   top: 50%;
   transform: translateY(-50%);
   margin: 0 auto;
+  width: 100%;
 }
 
 .project-images {
@@ -50,11 +51,17 @@ hr {
 .social-buttons-3 {
   max-width: 187px;
   margin: 10px auto;
+  @media (min-width: 1200px) {
+    max-width: 190px;
+  }
 }
 
 .social-buttons-4 {
   max-width: 250px;
   margin: 10px auto;
+  @media (min-width: 1200px) {
+    max-width: 252px;
+  }
 }
 
 .button-link {
@@ -131,6 +138,7 @@ a, .pagelink             { color: #246A73; }
 .pb24 { padding-bottom:24px; }
 .pb32 { padding-bottom:32px; }
 .pb40 { padding-bottom:40px; }
+.pb80 { padding-bottom:80px; }
 .plr8 { padding-left: 8px; padding-right: 8px}
 .plr16 { padding-left:16px; padding-right: 16px}
 .plr24 { padding-left:24px; padding-right: 24px}
@@ -141,6 +149,7 @@ a, .pagelink             { color: #246A73; }
 .mb24 { margin-bottom:24px; }
 .mb32 { margin-bottom:32px; }
 .mb40 { margin-bottom:40px; }
+.mt0 { margin-top: 0 }
 .mt8 { margin-top: 8px; }
 .mt16 { margin-top:16px; }
 .mt24 { margin-top:24px; }
@@ -151,11 +160,15 @@ a, .pagelink             { color: #246A73; }
 
 /* bootstrap overrides */
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   position: fixed;
+}
+
+.inline {
+  display: inline;
 }
 
 .row {
