@@ -9,9 +9,17 @@ $(function() {
       $buttonLinks = $('.button-link'),
       $fa2x = $('.fa-2x'),
       $nameAndPicture = $('.name-and-picture'),
-      $fullHeight = $('.full-height');
+      $fullHeight = $('.full-height'),
+      $img0 = $('.img-0'),
+      $img1 = $('.img-1'),
+      $img2 = $('.img-2'),
+      $img3 = $('.img-3'),
+      $img4 = $('.img-4'),
+      $img5 = $('.img-5'),
+      $projectImages = $('.project-images'),
+      $images = [$img0, $img1, $img2, $img3, $img4, $img5];
 
-  var imageId = 0,
+  var imageIndex = 0,
       firstPageLoad = true,
       $windowWidth = $(window).width(),
       $windowHeight = $(window).height(),
@@ -21,6 +29,7 @@ $(function() {
       navPadding,
       maxHeight;
 
+  // helper functions
   function toPx(integer) {
     return String(integer) + 'px';
   }
@@ -35,14 +44,7 @@ $(function() {
   }
   getSocialButtonSizes();
 
-  // need to get size for buttons on original screen size
-
-  // this function will be for resizing the screen.
-  function resizeButtons() {
-    $windowWidth = $(window).width();
-    $windowHeight = $(window).height();
-  }
-
+  // animate the side panel/navbar on mobile
   function animateSidePanel() {
     $subPanel.removeClass('p24').addClass('p8');
     getSocialButtonSizes();
@@ -65,6 +67,7 @@ $(function() {
     $subPanel.removeClass('full-height');
   }
 
+  // switch tabs on side panel/navbar buttons
   function switchTab() {
     event.preventDefault();
     var show = $(this).attr('href');
@@ -75,15 +78,13 @@ $(function() {
       animateSidePanel();
     }
   }
-
-  // use z-index with modulo
-  function switchImage() {
-    $('.img-' + imageId).hide();
-    imageId = (imageId + 1) % 6;
-    $('.img-' + imageId).show();
-  }
-
   $pageLinks.on('click', switchTab);
-  
+
+  // rotate images on highlighted projects
+  function switchImage() {
+    imageIndex = (imageIndex + 1) % 6;
+    $projectImages.hide();
+    $images[imageIndex].show();
+  }
   var intervalID = setInterval(switchImage, 3000);
 });
