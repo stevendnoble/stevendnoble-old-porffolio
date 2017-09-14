@@ -45,7 +45,11 @@ hr {
 
 .full-height {
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+.full-height::-webkit-scrollbar {
+  display: none;
 }
 
 .social-buttons-3, .social-buttons-4 {
