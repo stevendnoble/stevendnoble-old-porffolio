@@ -46,11 +46,12 @@ $(function() {
 
   // animate the side panel/navbar on mobile
   function animateSidePanel() {
-    $subPanel.removeClass('p24').addClass('p8');
+    $subPanel.removeClass('p24').addClass('p8')
+             .children('.center').removeClass('center');
     getSocialButtonSizes();
     $socialButtons3And4.addClass('inline');
     $buttonLinks.css({ width: toPx(socialButtonWidth), height: toPx(socialButtonWidth) });
-    $socialButtons7.css({ marginLeft: toPx(navPadding) });
+    // $socialButtons7.css({ marginLeft: toPx(navPadding) });
     if (socialButtonWidth < 32) {
       $fa2x.removeClass('fa-2x');
     }
