@@ -8,7 +8,14 @@ $(function() {
       $fa2x = $('.fa-2x'),
       $nameAndPicture = $('.name-and-picture'),
       $fullHeight = $('.full-height'),
-      $projectImages = $('.project-images');
+      $img0 = $('.img-0'),
+      $img1 = $('.img-1'),
+      $img2 = $('.img-2'),
+      $img3 = $('.img-3'),
+      $img4 = $('.img-4'),
+      $img5 = $('.img-5'),
+      $projectImages = $('.project-images'),
+      $images = [$img0, $img1, $img2, $img3, $img4, $img5];
 
   var imageIndex = 0,
       firstPageLoad = true,
@@ -74,7 +81,7 @@ $(function() {
   function switchImage() {
     imageIndex = (imageIndex + 1) % 6;
     $projectImages.hide();
-    $($projectImages[imageIndex]).show();
+    $images[imageIndex].show();
   }
   var intervalID = setInterval(switchImage, 3000);
 });
