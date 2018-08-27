@@ -45,8 +45,9 @@ body {
 ul {
   list-style: none;
   margin-left: 0;
-  text-indent: -2em;
-  margin-bottom: 30px; }
+  text-indent: -20px;
+  margin-bottom: 0;
+  padding-left: 20px; }
   ul li:hover, ul li.hover {
     color: #FFFF99; }
   ul.starred li:before {
@@ -59,6 +60,10 @@ p {
 h1 {
   font-family: 'kg_second_chances_sketchRg', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 200%; }
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none; }
 
 .container {
   width: 100%; }
@@ -91,5 +96,8 @@ h1 {
 .pink {
   color: pink;
   font-size: 110%; }
+
+.mt20 {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -94,7 +94,7 @@ a:focus {
 
 .header-background {
   height: 12px;
-  margin: -20px 0 0 -80px;
+  margin: -20px 0 0 -160px;
 }
 
 .subheader-background {
@@ -103,9 +103,9 @@ a:focus {
   width: 70%;
 }
 
-.width-340 { width: 340px; }
-.width-200 { width: 200px; }
-.width-240 { width: 240px; }
+.width-340 { width: 420px; }
+.width-200 { width: 280px; }
+.width-240 { width: 320px; }
 
 /*
 purple: dark  = 630899;

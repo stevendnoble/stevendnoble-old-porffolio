@@ -65,8 +65,9 @@ body {
 ul {
   list-style: none;
   margin-left: 0;
-  text-indent: -2em;
-  margin-bottom: 30px;
+  text-indent: -20px;
+  margin-bottom: 0;
+  padding-left: 20px;
   li {
     &:hover, &.hover {
       color: #FFFF99;
@@ -89,6 +90,10 @@ h1 {
   font-size: 200%;
 }
 
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+}
 
 // bootstrap overrides
 .container {
@@ -130,3 +135,5 @@ h1 {
   color: pink;
   font-size: 110%
 }
+
+.mt20 { margin-top: 20px; }

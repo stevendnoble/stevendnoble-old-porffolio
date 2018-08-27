@@ -1,10 +1,11 @@
 $(function () {
-
-  var interval = 10;
+  var $showText = $('.show-text');
+  var interval = 20;
 
   var subMessageText = 'Today, we\'re going to learn about my favorite thing... ME! Let\'s start with the agenda items. What would you like to learn about first?',
       hiSubMessage = new Message(subMessageText, '.hi-sub-message', null),
-      hiMessage = new Message('Hi! I\'m Mr. Noble.', '.hi-message', hiSubMessage);
+      hiMessage = new Message('Hi! I\'m Mr. Noble.', '.hi-message', hiSubMessage),
+      messages = { hiMessage: hiMessage, hiSubMessage: hiSubMessage };
 
   var skillsSection = [
     {target: '.skills-1-', title: 'Languages', bullets: ['Ruby', 'JavaScript', 'HTML', 'CSS/SCSS']},
@@ -12,7 +13,6 @@ $(function () {
     {target: '.skills-3-', title: 'DB/Storage', bullets: ['Postgres', 'MongoDB', 'Redis']},
     {target: '.skills-4-', title: 'Other', bullets: ['Github', 'Heroku', 'jQuery', 'Rspec']},
   ];
-  var skills = buildMessages(skillsSection);
 
   var experienceSection = [{
     target: '.experience-1-',
@@ -42,7 +42,30 @@ $(function () {
       '* Adapted curriculum to students with varied skill levels',
       '* Coached an Academic Decathlon team, which led to organizing regional and state competitions for teams all over Massachusetts'
   ]}];
-  var experience = buildMessages(experienceSection);
+
+  var educationSection = [{
+    target: '.education-1-',
+    title: 'Grand Canyon University',
+    bullets: [
+      'Phoenix, AZ',
+      'M.Ed. Special Education',
+      '4.0 GPA'
+  ]}, {
+    target: '.education-2-',
+    title: 'New York University',
+    bullets: [
+      'New York City, NY',
+      'M.S. Mathematics',
+      '3.6 GPA'
+  ]}, {
+    target: '.education-3-',
+    title: 'Framingham State University',
+    bullets: [
+      'Framingham, MA, 2013-2015',
+      'B.S. Mathematics, Minor: Economics',
+      '3.6 GPA',
+      'Frank Castagna Award for Excellence in Mathematics'
+  ]}];
 
   function Message(text, target, nextMessage) {
     this.text = text;
@@ -50,16 +73,25 @@ $(function () {
     this.nextMessage = nextMessage;
   }
 
-  function buildMessages(messageObjects) {
-    var result = [],
-        nextMessage;
-    for(var i = messageObjects.length - 1; i >= 0; i--) {
-      var messageObject = messageObjects[i];
-      for(var j = messageObject.bullets.length - 1; j >= 0; j--) {
-        nextMessage = result.length === 0 ? null : result[result.length - 1];
-        result.push(new Message(messageObject.bullets[j], (messageObject.target + j), nextMessage));
+  function buildMessages(arr) {
+    var result,
+        nextMessage = null;
+    while(arr.length) {
+      var section = arr.pop();
+      for(var j = section.bullets.length - 1; j >= 0; j--) {
+        result = new Message(
+          section.bullets[j],
+          section.target + j,
+          nextMessage
+        );
+        nextMessage = result;
       }
-      result.push(new Message(messageObject.title, (messageObject.target + 'title'), result[result.length - 1]));
+      result = new Message(
+        section.title,
+        section.target + 'title',
+        nextMessage
+      );
+      nextMessage = result;
     }
     return result;
   }
@@ -71,34 +103,40 @@ $(function () {
     } else if (message.nextMessage) {
       showText(message.nextMessage, 0);
     } else {
-      setClickHandlers();
+      bindClickHandlers();
     }
   }
 
-  function clearBoard(callback) {
+  function clearBoard() {
     $('.clear').fadeOut(1500);
-    $('.empty').empty();
-  }
-
-  function unbindClickHandlers() {
-    $('.skills').off('click');
-    $('.experience').off('click');
-  }
-
-  function clickHandler(event) {
-    var className = event.currentTarget.className;
-    clearBoard();
-    unbindClickHandlers();
     setTimeout(function() {
-      $('.' + className).show();
-      showText(event.data.message, 0);
+      $('.empty').empty();
+    }, 1500);
+  }
+
+  function handleClick(event) {
+    var section = event.currentTarget.dataset.section,
+        className = '.' + section;
+
+    unbindClickHandlers();
+    clearBoard();
+    setTimeout(function() {
+      $(className).show();
+      showText(messages[section], 0);
     }, 2000);
   }
 
-  function setClickHandlers() {
-    $('.skills').on('click', { message: skills[skills.length-1] }, clickHandler);
-    $('.experience').on('click', { message: experience[experience.length-1] }, clickHandler);
+  function unbindClickHandlers() {
+    $showText.off('click');
   }
+
+  function bindClickHandlers() {
+    $showText.on('click', handleClick);
+  }
+
+  messages.skills = buildMessages(skillsSection);
+  messages.experience = buildMessages(experienceSection);
+  messages.education = buildMessages(educationSection);
 
   showText(hiMessage, 0);
 }); 
