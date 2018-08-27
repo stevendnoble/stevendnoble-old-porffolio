@@ -112,8 +112,8 @@ p, .font-black               { color: #160F29; }
 .font-highlight              { color: #7B00C4; }
 .font-secondary              { color: #630899; }
 .font-light                  { color: #FFD5FF; }
-a, .page-link                { color: #7B00C4; }
-a:hover, .page-link:hover    { color: #630899; text-decoration: none; }
+a                            { color: #7B00C4; }
+a:hover, a:focus             { color: #630899; text-decoration: none; }
 .dark-background  { background-color: #630899; }
 .light-background { background-color: #FFD5FF; }
 .white-background { background-color: #FFFFFF; }
