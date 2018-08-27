@@ -46,8 +46,7 @@ $(function() {
 
   // animate the side panel/navbar on mobile
   function animateSidePanel() {
-    $subPanel.removeClass('p24').addClass('p8')
-             .children('.center').removeClass('center');
+    $subPanel.removeClass('p24').addClass('p8').children('.center').removeClass('center');
     getSocialButtonSizes();
     $socialButtons3And4.addClass('inline');
     $buttonLinks.css({ width: toPx(socialButtonWidth), height: toPx(socialButtonWidth) });
@@ -74,7 +73,7 @@ $(function() {
     var show = $(this).attr('href');
     $links.hide();
     $(show).show();
-    if (firstPageLoad && $windowWidth <= 576) {
+    if (firstPageLoad && $windowWidth === $subPanel.width()) {
       firstPageLoad = false;
       animateSidePanel();
     }
