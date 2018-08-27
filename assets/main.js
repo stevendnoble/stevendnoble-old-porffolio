@@ -19,8 +19,8 @@ $(function() {
 
   var imageIndex = 0,
       firstPageLoad = true,
-      $windowWidth = $(window).width(),
-      $windowHeight = $(window).height(),
+      $windowWidth ,
+      $windowHeight,
       socialButtonWidth,
       fullButtonPanelWidth,
       navHeight,
@@ -34,13 +34,18 @@ $(function() {
 
   // this is used when the side panel is animated on mobile
   function getSocialButtonSizes() {
+    if (!firstPageLoad) {
+      window.location.reload(false);
+    }
+    $windowWidth = $(window).width();
+    $windowHeight = $(window).height();
     socialButtonWidth = Math.floor(($windowWidth - 100) / 7);
     fullButtonPanelWidth = (socialButtonWidth + 12) * 7;
     navHeight = socialButtonWidth + 16;
     navPadding = ($windowWidth - fullButtonPanelWidth - 16) / 2;
     maxHeight = $windowHeight - navHeight;
   }
-  getSocialButtonSizes();
+  $(window).on('load resize', getSocialButtonSizes);
 
   // animate the side panel/navbar on mobile
   function fadeOutButtons() {

@@ -97,6 +97,12 @@ a:focus {
   margin: -20px 0 0 -80px;
 }
 
+.subheader-background {
+  height: 2px;
+  margin: -8px 0 8px;
+  width: 70%;
+}
+
 .width-340 { width: 340px; }
 .width-200 { width: 200px; }
 .width-240 { width: 240px; }
