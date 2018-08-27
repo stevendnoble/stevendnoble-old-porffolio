@@ -2,19 +2,13 @@ $(function() {
   var $pageLinks = $('.page-link'),
       $links = $('.links'),
       $subPanel = $('.sub-panel'),
+      $fadePanel = $('.fade-panel'),
       $socialButtons = $('.social-buttons'),
       $buttonLinks = $('.button-link'),
       $fa2x = $('.fa-2x'),
       $nameAndPicture = $('.name-and-picture'),
       $fullHeight = $('.full-height'),
-      $img0 = $('.img-0'),
-      $img1 = $('.img-1'),
-      $img2 = $('.img-2'),
-      $img3 = $('.img-3'),
-      $img4 = $('.img-4'),
-      $img5 = $('.img-5'),
-      $projectImages = $('.project-images'),
-      $images = [$img0, $img1, $img2, $img3, $img4, $img5];
+      $projectImages = $('.project-images');
 
   var imageIndex = 0,
       firstPageLoad = true,
@@ -43,7 +37,8 @@ $(function() {
 
   // animate the side panel/navbar on mobile
   function fadeOutButtons() {
-    $buttonLinks.fadeOut(2000, animateSidePanel);
+    $fadePanel.fadeOut(1000, animateSidePanel);
+    $nameAndPicture.animate({ height: 0 }, 2000);
   }
 
   function animateSidePanel() {
@@ -52,10 +47,6 @@ $(function() {
     if (socialButtonWidth < 32) {
       $fa2x.removeClass('fa-2x');
     }
-    $nameAndPicture.animate({ height: 0 }, 2000, animateNav);
-  }
-
-  function animateNav() {
     $nameAndPicture.hide();
     $subPanel.animate({ height: toPx(navHeight) }, 2000, fadeInButtons);
   }
@@ -63,7 +54,7 @@ $(function() {
   function fadeInButtons() {
     $fullHeight.css({ maxHeight: toPx(maxHeight) });
     $subPanel.removeClass('full-height');
-    $buttonLinks.fadeIn(2000);
+    $fadePanel.fadeIn(2000);
   }
 
   // switch tabs on side panel/navbar buttons
@@ -83,7 +74,7 @@ $(function() {
   function switchImage() {
     imageIndex = (imageIndex + 1) % 6;
     $projectImages.hide();
-    $images[imageIndex].show();
+    $($projectImages[imageIndex]).show();
   }
   var intervalID = setInterval(switchImage, 3000);
 });
