@@ -2,10 +2,7 @@ $(function() {
   var $pageLinks = $('.page-link'),
       $links = $('.links'),
       $subPanel = $('.sub-panel'),
-      $socialButtons3 = $('.social-buttons-3'),
-      $socialButtons4 = $('.social-buttons-4'),
-      $socialButtons3And4 = $('.social-buttons-3, .social-buttons-4'),
-      $socialButtons7 = $('.social-buttons'),
+      $socialButtons = $('.social-buttons'),
       $buttonLinks = $('.button-link'),
       $fa2x = $('.fa-2x'),
       $nameAndPicture = $('.name-and-picture'),
@@ -36,7 +33,7 @@ $(function() {
 
   // this is used when the side panel is animated on mobile
   function getSocialButtonSizes() {
-    socialButtonWidth = Math.floor(($windowWidth - 114) / 7);
+    socialButtonWidth = Math.floor(($windowWidth - 100) / 7);
     fullButtonPanelWidth = (socialButtonWidth + 12) * 7;
     navHeight = socialButtonWidth + 16;
     navPadding = ($windowWidth - fullButtonPanelWidth - 16) / 2;
@@ -45,26 +42,28 @@ $(function() {
   getSocialButtonSizes();
 
   // animate the side panel/navbar on mobile
+  function fadeOutButtons() {
+    $buttonLinks.fadeOut(2000, animateSidePanel);
+  }
+
   function animateSidePanel() {
-    $subPanel.removeClass('p24').addClass('p8').children('.center').removeClass('center');
-    getSocialButtonSizes();
-    $socialButtons3And4.addClass('inline');
     $buttonLinks.css({ width: toPx(socialButtonWidth), height: toPx(socialButtonWidth) });
-    // $socialButtons7.css({ marginLeft: toPx(navPadding) });
+    $socialButtons.css({ maxWidth: $windowWidth });
     if (socialButtonWidth < 32) {
       $fa2x.removeClass('fa-2x');
     }
-    $nameAndPicture.animate({ height: 0 }, 1000, animateNav);
+    $nameAndPicture.animate({ height: 0 }, 2000, animateNav);
   }
 
   function animateNav() {
     $nameAndPicture.hide();
-    $subPanel.animate({ height: toPx(navHeight) }, 1000, modifyFullHeight);
+    $subPanel.animate({ height: toPx(navHeight) }, 2000, fadeInButtons);
   }
 
-  function modifyFullHeight() {
+  function fadeInButtons() {
     $fullHeight.css({ maxHeight: toPx(maxHeight) });
     $subPanel.removeClass('full-height');
+    $buttonLinks.fadeIn(2000);
   }
 
   // switch tabs on side panel/navbar buttons
@@ -75,7 +74,7 @@ $(function() {
     $(show).show();
     if (firstPageLoad && $windowWidth === $subPanel.width()) {
       firstPageLoad = false;
-      animateSidePanel();
+      fadeOutButtons();
     }
   }
   $pageLinks.on('click', switchTab);
