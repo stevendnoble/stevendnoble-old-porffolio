@@ -1,0 +1,211 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+} 
+
+hr {
+  width: 60%;
+  border-top: 1px solid;
+  margin: 12px auto;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+.font-small {
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.side-panel {
+  position: relative;
+}
+
+.side-panel .center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.project-images {
+  border: 1px solid darkgray;
+}
+
+.full-height {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.full-height::-webkit-scrollbar {
+  display: none;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-buttons {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.button-link {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 6px;
+}
+
+.btn-default {
+  transition: all ease-in-out 300ms;
+}
+.btn-default:hover,.btn-default:focus {
+  transform: scale(1.1)
+}
+
+.headshot {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.headshot-image {
+  max-height: 240px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .headshot-image {
+    max-height: 180px;
+  }
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header-background {
+  height: 12px;
+  margin: -20px 0 0 -160px;
+}
+
+.subheader-background {
+  height: 2px;
+  margin: -8px 0 8px;
+  width: 70%;
+}
+
+.width-340 { width: 420px; }
+.width-200 { width: 280px; }
+.width-240 { width: 320px; }
+
+/*
+purple: dark  = 831D2D;
+purple: light = BB0B27;
+pink:   light = F09FAC;
+*/
+
+
+p, .font-black               { color: #160F29; }
+.font-highlight              { color: #BB0B27; }
+.font-secondary              { color: #831D2D; }
+.font-light                  { color: #FEA9A9; }
+a                            { color: #BB0B27; }
+a:hover, a:focus             { color: #831D2D; text-decoration: none; }
+.dark-background  { background-color: #831D2D; }
+.light-background { background-color: #FEA9A9; }
+.white-background { background-color: #FFFFFF; }
+.btn-default      { background-color: #FEA9A9 !important;
+                        border-color: #FEA9A9 !important;
+                               color: #831D2D !important; }
+.well             { background-color: #FEA9A9; }
+.p0  { padding: 0; }
+.p8  { padding: 8px; }
+.p16 { padding:16px; }
+.p24 { padding:24px; }
+.p32 { padding:32px; }
+.p40 { padding:40px; }
+.pt0 { padding-top: 0; }
+.pt8 { padding-top: 8px; }
+.pt16 { padding-top:16px; }
+.pt24 { padding-top:24px; }
+.pt32 { padding-top:32px; }
+.pt40 { padding-top:40px; }
+.pb8  { padding-bottom: 8px; }
+.pb16 { padding-bottom:16px; }
+.pb24 { padding-bottom:24px; }
+.pb32 { padding-bottom:32px; }
+.pb40 { padding-bottom:40px; }
+.pb80 { padding-bottom:80px; }
+.plr8  { padding-left: 8px; padding-right: 8px }
+.plr16 { padding-left:16px; padding-right: 16px }
+.plr24 { padding-left:24px; padding-right: 24px }
+.plr32 { padding-left:32px; padding-right: 32px }
+.plr40 { padding-left:40px; padding-right: 40px }
+.pl0  { padding-left: 0; }
+.pl8  { padding-left: 8px; }
+.pl16 { padding-left:16px; }
+.pl24 { padding-left:24px; }
+.pl32 { padding-left:32px; }
+.pl40 { padding-left:40px; }
+.pr0  { padding-right: 0; }
+.pr8  { padding-right: 8px }
+.pr16 { padding-right: 16px }
+.pr24 { padding-right: 24px }
+.pr32 { padding-right: 32px }
+.pr40 { padding-right: 40px }
+.m0   { margin: 0; }
+.mb8  { margin-bottom: 8px; }
+.mb16 { margin-bottom:16px; }
+.mb24 { margin-bottom:24px; }
+.mb32 { margin-bottom:32px; }
+.mb40 { margin-bottom:40px; }
+.mt0  { margin-top: 0 }
+.mt8  { margin-top: 8px; }
+.mt16 { margin-top:16px; }
+.mt24 { margin-top:24px; }
+.mt32 { margin-top:32px; }
+.mt40 { margin-top:40px; }
+.mr0  { margin-right: 0 }
+.mr8  { margin-right: 8px; }
+.mr16 { margin-right:16px; }
+.mr24 { margin-right:24px; }
+.mr32 { margin-right:32px; }
+.mr40 { margin-right:40px; }
+.ml0  { margin-left: 0 }
+.ml8  { margin-left: 8px; }
+.ml16 { margin-left:16px; }
+.ml24 { margin-left:24px; }
+.ml32 { margin-left:32px; }
+.ml40 { margin-left:40px; }
+
+/* bootstrap overrides */
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+}
+
+.inline { display: inline; }
+.flex { display: flex; }
+.tmp-hidden { display: none; }
+
+.row { margin: 0; }
+.no-padding { padding: 0; }
+
+.well {
+  border-radius: 0;
+  border: none;
+  margin: 0 16px 16px;
+  box-shadow: 2px 2px 4px rgba(123, 0, 196, 0.5);
+}
