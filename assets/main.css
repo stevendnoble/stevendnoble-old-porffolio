@@ -21,6 +21,10 @@ a:focus {
   line-height: 17px;
 }
 
+.fa-2x {
+  font-size: 1.6em;
+}
+
 .side-panel {
   position: relative;
 }
@@ -107,26 +111,25 @@ a:focus {
 .width-200 { width: 280px; }
 .width-240 { width: 320px; }
 
-/*
-purple: dark  = 630899;
-purple: light = 7B00C4;
-pink:   light = FFD5FF;
-*/
-
+/*  dark  = 630899;  */
+/*  light = 7B00C4;  */
+/*  gray  = F0F0F0;  */
 
 p, .font-black               { color: #160F29; }
 .font-highlight              { color: #7B00C4; }
 .font-secondary              { color: #630899; }
-.font-light                  { color: #FFD5FF; }
+.font-light                  { color: #FFFFFF; }
 a                            { color: #7B00C4; }
 a:hover, a:focus             { color: #630899; text-decoration: none; }
 .dark-background  { background-color: #630899; }
-.light-background { background-color: #FFD5FF; }
+.light-background { background-color: #F0F0F0; }
 .white-background { background-color: #FFFFFF; }
-.btn-default      { background-color: #FFD5FF !important;
-                        border-color: #FFD5FF !important;
+.btn-default      { background-color: #F0F0F0 !important;
+                        border-color: #F0F0F0 !important;
                                color: #630899 !important; }
-.well             { background-color: #FFD5FF; }
+.well             { background-color: #F0F0F0;
+                          box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5); }
+
 .p0  { padding: 0; }
 .p8  { padding: 8px; }
 .p16 { padding:16px; }
@@ -207,5 +210,4 @@ a:hover, a:focus             { color: #630899; text-decoration: none; }
   border-radius: 0;
   border: none;
   margin: 0 16px 16px;
-  box-shadow: 2px 2px 4px rgba(123, 0, 196, 0.5);
 }
