@@ -2,8 +2,8 @@
 
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 17px;
+  line-height: 24px;
 } 
 
 hr {
@@ -17,8 +17,12 @@ a:focus {
 }
 
 .font-small {
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .link-icons {
@@ -84,6 +88,11 @@ a:focus {
   transform: scale(1.1)
 }
 
+.resume-max-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .headshot {
   max-width: 60%;
   margin: 0 auto;
@@ -106,7 +115,7 @@ a:focus {
 
 .header-background {
   height: 12px;
-  margin: -20px 0 0 -160px;
+  margin: -20px 0 0 -200px;
 }
 
 .subheader-background {
@@ -117,7 +126,7 @@ a:focus {
 
 .width-340 { width: 420px; }
 .width-200 { width: 280px; }
-.width-240 { width: 320px; }
+.width-240 { width: 340px; }
 
 .well {
   border-radius: 0;
