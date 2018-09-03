@@ -2,8 +2,8 @@
 
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 17px;
+  line-height: 24px;
 } 
 
 hr {
@@ -17,8 +17,16 @@ a:focus {
 }
 
 .font-small {
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.link-icons {
+  min-width: 68px;
 }
 
 .fa-2x {
@@ -50,8 +58,12 @@ a:focus {
   display: none;
 }
 
+.flex { display: flex; }
+.flex-grow { flex-grow: 1; }
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+
 .flex-center {
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -76,6 +88,11 @@ a:focus {
   transform: scale(1.1)
 }
 
+.resume-max-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .headshot {
   max-width: 60%;
   margin: 0 auto;
@@ -98,7 +115,7 @@ a:focus {
 
 .header-background {
   height: 12px;
-  margin: -20px 0 0 -160px;
+  margin: -20px 0 0 -200px;
 }
 
 .subheader-background {
@@ -109,15 +126,20 @@ a:focus {
 
 .width-340 { width: 420px; }
 .width-200 { width: 280px; }
-.width-240 { width: 320px; }
+.width-240 { width: 340px; }
 
-/*
-dark  = 831D2D;
-light = BB0B27;
-gray = F0F0F0;
-*/
+.well {
+  border-radius: 0;
+  border: none;
+  margin: 0 16px 16px;
+}
 
+/*  dark  = 831D2D;  */
+/*  light = BB0B27;  */
+/*  gray  = F0F0F0;  */
 
+.well             { background-color: #F0F0F0;
+                          box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5); }
 p, .font-black               { color: #160F29; }
 .font-highlight              { color: #BB0B27; }
 .font-secondary              { color: #831D2D; }
@@ -130,7 +152,7 @@ a:hover, a:focus             { color: #831D2D; text-decoration: none; }
 .btn-default      { background-color: #F0F0F0 !important;
                         border-color: #F0F0F0 !important;
                                color: #831D2D !important; }
-.well             { background-color: #F0F0F0; }
+
 .p0  { padding: 0; }
 .p8  { padding: 8px; }
 .p16 { padding:16px; }
@@ -201,15 +223,8 @@ a:hover, a:focus             { color: #831D2D; text-decoration: none; }
 }
 
 .inline { display: inline; }
-.flex { display: flex; }
 .tmp-hidden { display: none; }
+.full-width { width: 100%; }
 
-.row { margin: 0; }
+.no-margin { margin: 0; }
 .no-padding { padding: 0; }
-
-.well {
-  border-radius: 0;
-  border: none;
-  margin: 0 16px 16px;
-  box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
-}
