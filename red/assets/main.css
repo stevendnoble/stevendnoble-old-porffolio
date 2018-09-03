@@ -82,10 +82,15 @@ a:focus {
 }
 
 .btn-default {
-  transition: all ease-in-out 300ms;
+  transition: all ease-in-out 500ms;
 }
-.btn-default:hover,.btn-default:focus {
-  transform: scale(1.1)
+
+.btn-default:hover, .btn-default:focus {
+  transform: scale(1.2)
+}
+
+a:hover .well {
+  transform: scale(1.05)
 }
 
 .resume-max-width {
@@ -138,6 +143,7 @@ a:focus {
 /*  light = BB0B27;  */
 /*  gray  = F0F0F0;  */
 
+a:hover .well           { box-shadow: 2px 2px 4px rgba(255, 128, 128, 0.7); }
 .well             { background-color: #F0F0F0;
                           box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5); }
 p, .font-black               { color: #160F29; }
