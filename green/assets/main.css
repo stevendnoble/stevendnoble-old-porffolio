@@ -141,10 +141,10 @@ a:hover .well {
 
 /*  dark  = 0BBB27;  */
 /*  light = 1D832D;  */
-/*  gray  = E0E0E0;  */
+/*  gray  = F0F0F0;  */
 
 a:hover .well           { box-shadow: 2px 2px 4px rgba(128, 255, 128, 0.7); }
-.well             { background-color: #E0E0E0;
+.well             { background-color: #F0F0F0;
                           box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5); }
 p, .font-black               { color: #160F29; }
 .font-highlight              { color: #1D832D; }
@@ -153,7 +153,7 @@ p, .font-black               { color: #160F29; }
 a                            { color: #1D832D; }
 a:hover, a:focus             { color: #0BBB27; text-decoration: none; }
 .dark-background  { background-color: #1D832D; }
-.light-background { background-color: #E0E0E0; }
+.light-background { background-color: #F0F0F0; }
 .white-background { background-color: #FFFFFF; }
 .btn-default      { background-color: #0BBB27 !important;
                         border-color: #0BBB27 !important;
