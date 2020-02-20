@@ -15,6 +15,7 @@ $(function() {
       $img4 = $('.img-4'),
       $img5 = $('.img-5'),
       $projectImages = $('.project-images'),
+      $fadeOutBg = $('.fade-out-bg'),
       $images = [$img0, $img1, $img2, $img3, $img4, $img5];
 
   var imageIndex = 0,
@@ -56,6 +57,7 @@ $(function() {
   function animateSidePanel() {
     $buttonLinks.css({ width: toPx(socialButtonWidth), height: toPx(socialButtonWidth) });
     $socialButtons.css({ maxWidth: $windowWidth });
+    $fadeOutBg.removeClass('pb40');
     if (socialButtonWidth < 32) {
       $fa2x.removeClass('fa-2x');
     }
