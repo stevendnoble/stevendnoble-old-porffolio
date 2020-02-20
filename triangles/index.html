@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- set viewport to device width to make site responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+  <!-- custom styles -->
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+	<meta charset="UTF-8">
+	<title>Rigid Transformations</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="row text-center box" id="title">
+					<h1>Transformations in the Coordinate Plane</h1>
+				</div>
+				<div class="row box">
+					<h2>Translations</h2>
+					<h4>(x, y) &rarr; (x + h, y + k)</h4>
+				</div>
+				<div class="row box">
+					<h2>Reflections</h2>
+					<ul>
+						<h4><li>Across the x-axis</li></h4>
+						<h4><li>Across the y-axis</li></h4>
+						<h4><li>Over the line y = x</li></h4>
+						<h4><li>Over the line y = -x</li></h4>
+					</ul>
+				</div>
+				<div class="row box">
+					<h2>Rotations</h2>
+					<ul>
+						<h4><li>90&deg; counterclockwise</li></h4>
+						<h4><li>180&deg; counterclockwise</li></h4>
+						<h4><li>270&deg; counterclockwise</li></h4>
+						<h4><li>Clockwise</li></h4>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="row box" id="canvas">
+					
+				</div>
+				<div class="row box">
+					<div id="points">
+						<h2>Enter 3 coordinates below:</h2>
+						<form>
+							<div class="form-group form-inline">
+								<h3>A (<input type="text" placeholder="x" id="ax" autofocus="true">, <input type="text" placeholder="y" id="ay">)</h3>
+							</div>
+							<div class="form-group form-inline">
+								<h3>B (<input type="text" placeholder="x" id="bx">, <input type="text" placeholder="y" id="by">)</h3>
+							</div>
+							<div class="form-group form-inline">
+								<h3>C (<input type="text" placeholder="x" id="cx">, <input type="text" placeholder="y" id="cy">)</h3>
+							</div>
+							<div class="form-group form-inline">
+								<button type="submit" id="coordinates">Submit</button>
+							</div>
+						</form>		
+					</div>
+					<div id="transformations">
+						<h2 id="choose-transformation">Choose a transformation:</h2>
+						<div class="col-md-5">
+							<h2>Points</h2>
+							<h3>
+								A(<span class="ax"></span>, <span class="ay"></span>)<span class="new-triangle"> &rarr; D(<span class="dx"></span>, <span class="dy"></span>)</span>
+							</h3>
+							<h3>
+								B(<span class="bx"></span>, <span class="by"></span>)<span class="new-triangle"> &rarr; E(<span class="ex"></span>, <span class="ey"></span>)</span>
+							</h3>
+							<h3>
+								C(<span class="cx"></span>, <span class="cy"></span>)<span class="new-triangle"> &rarr; F(<span class="fx"></span>, <span class="fy"></span>)</span>
+							</h3>
+						</div>
+						<div class="col-md-7">
+							<div id="transformation-buttons">
+								<button class="btn btn-danger" id="translation-btn">Translation</button>
+								<button class="btn btn-success" id="reflection-btn">Reflection</button>
+								<button class="btn btn-primary" id="rotation-btn">Rotation</button>
+							</div>
+							<div id="translation">
+								<h2>Translation</h2>
+								<form>
+									<div class="form-group form-inline">
+										<h4>slide left (negative) or right (positive): <input type="number" placeholder="h" id="horizontal-slide"></h4>
+									</div>
+									<div class="form-group form-inline">
+										<h4>slide up (positive) or down (positive): <input type="number" placeholder="k" id="vertical-slide"></h4>
+									</div>
+									<div class="form-group form-inline">
+										<button type="submit" id="translation-submit">Submit</button>
+									</div>
+								</form>
+							</div>
+							<div id="reflection">
+								<h2>Reflection</h2>
+								<div id="reflection-buttons">
+									<button class="btn btn-success" id="over-x">Over x-axis</button>
+									<button class="btn btn-success" id="over45">Over the Line y=x</button>
+									<button class="btn btn-success" id="over-y">Over y-axis</button>
+									<button class="btn btn-success" id="over-45">Over the Line y=-x</button>
+								</div>
+							</div>
+							<div id="rotation">
+								<h2>Rotation</h2>
+								<h3>Counterclockwise</h3>
+								<div id="cc-rotation-buttons">
+									<button class="btn btn-primary 90deg">90&deg;</button>
+									<button class="btn btn-primary 180deg">180&deg;</button>
+									<button class="btn btn-primary 270deg">270&deg;</button>
+								</div>
+								<h3>Clockwise</h3>
+								<div id="c-rotation-buttons">
+									<button class="btn btn-primary 270deg">90&deg;</button>
+									<button class="btn btn-primary 180deg">180&deg;</button>
+									<button class="btn btn-primary 90deg">270&deg;</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jquery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<!-- bootstrapjs -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+  <!-- threeJS scripts -->
+	<script src="js/three.min.js"></script>
+	<script src="js/OrbitControls.js"></script>
+	<script src="js/TrackballControls.js"></script>
+
+  <!-- custom script -->
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
