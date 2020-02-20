@@ -63,6 +63,10 @@ a:focus {
 .flex-row { flex-direction: row; }
 .flex-column { flex-direction: column; }
 
+.center-vertically {
+  align-items: center;
+}
+
 .flex-center {
   align-items: center;
   justify-content: center;
@@ -158,6 +162,9 @@ a:hover, a:focus             { color: #831D2D; text-decoration: none; }
 .btn-default      { background-color: #F0F0F0 !important;
                         border-color: #F0F0F0 !important;
                                color: #831D2D !important; }
+.btn-primary      { background-color: #831D2D !important;
+                        border-color: #831D2D !important;
+                               color: #FFFFFF !important; }
 
 .p0  { padding: 0; }
 .p8  { padding: 8px; }
@@ -195,6 +202,7 @@ a:hover, a:focus             { color: #831D2D; text-decoration: none; }
 .pr32 { padding-right: 32px }
 .pr40 { padding-right: 40px }
 .m0   { margin: 0; }
+.mb4  { margin-bottom: 4px; }
 .mb8  { margin-bottom: 8px; }
 .mb16 { margin-bottom:16px; }
 .mb24 { margin-bottom:24px; }
